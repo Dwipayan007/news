@@ -1,0 +1,408 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<title>News Times</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="keywords" content="News Times Responsive web template, Bootstrap Web Templates, Flat Web Templates, Android Compatible web template, 
+Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, SonyEricsson, Motorola web design" />
+<script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>
+<!-- Custom Theme files -->
+<link href="css/bootstrap.css" rel="stylesheet" type="text/css" media="all" />
+<link href="css/style.css" rel="stylesheet" type="text/css" media="all" />
+<!-- js -->
+<script src="js/jquery-1.11.1.min.js"></script>
+<!-- //js -->
+<link href='//fonts.googleapis.com/css?family=Oswald:400,300,700' rel='stylesheet' type='text/css'>
+<script>
+
+	$(document).ready(function(){
+
+/**
+ * This object controls the nav bar. Implement the add and remove
+ * action over the elements of the nav bar that we want to change.
+ *
+ * @type {{flagAdd: boolean, elements: string[], add: Function, remove: Function}}
+ */
+var myNavBar = {
+
+    flagAdd: true,
+
+    elements: [],
+
+    init: function (elements) {
+        this.elements = elements;
+    },
+
+    add : function() {
+        if(this.flagAdd) {
+            for(var i=0; i < this.elements.length; i++) {
+                document.getElementById(this.elements[i]).className += " fixed-theme";
+            }
+            this.flagAdd = false;
+        }
+    },
+
+    remove: function() {
+        for(var i=0; i < this.elements.length; i++) {
+            document.getElementById(this.elements[i]).className =
+                    document.getElementById(this.elements[i]).className.replace( /(?:^|\s)fixed-theme(?!\S)/g , '' );
+        }
+        this.flagAdd = true;
+    }
+
+};
+
+/**
+ * Init the object. Pass the object the array of elements
+ * that we want to change when the scroll goes down
+ */
+myNavBar.init(  [
+    "header",
+    "header-container",
+    "brand"
+]);
+
+/**
+ * Function that manage the direction
+ * of the scroll
+ */
+function offSetManager(){
+
+    var yOffset = 0;
+    var currYOffSet = window.pageYOffset;
+
+    if(yOffset < currYOffSet) {
+        myNavBar.add();
+    }
+    else if(currYOffSet == yOffset){
+        myNavBar.remove();
+    }
+
+}
+
+/**
+ * bind to the document scroll detection
+ */
+window.onscroll = function(e) {
+    offSetManager();
+}
+
+/**
+ * We have to do a first detectation of offset because the page
+ * could be load with scroll down set.
+ */
+offSetManager();
+});
+</script>
+</head>
+
+<body>
+
+<!-- banner -->
+<!-- banner-bottom -->
+	<div class="banner-bottom">
+		<div class="container">
+		<!-- banner -->
+ <nav id="header" class="navbar navbar-fixed-top">
+            <div id="header-container" class="container navbar-container">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <a id="brand" class="navbar-brand" href="#">Project name</a>
+                </div>
+                <div id="navbar" class="collapse navbar-collapse">
+                    <ul class="nav navbar-nav">
+                        <li class="active"><a href="#">Home</a></li>
+                        <li><a href="#about">About</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                    </ul>
+                </div><!-- /.nav-collapse -->
+            </div><!-- /.container -->
+        </nav><!-- /.navbar -->
+		
+			<div class="banner-bottom-grids">
+			<div class="move-text">
+				<div class="breaking_news">
+					<h2>Breaking News</h2>
+				</div>
+				<div class="marquee">
+					<div class="marquee1"><a class="breaking" href="single.html">A 5-year-old boy who recently returned to the U.S from Ebola-stricken West Africa is under observation after experiencing a fever.</a></div>
+					<div class="marquee2"><a class="breaking" href="single.html">The surprisingly successful president of the Philippines and peacemaking in the Philippines: Shaking it all up.</a></div>
+					<div class="clearfix"></div>
+				</div>
+				<div class="clearfix"></div>
+				<script type="text/javascript" src="js/jquery.marquee.js"></script>
+				<script>
+				  $('.marquee').marquee({ pauseOnHover: true });
+				  //@ sourceURL=pen.js
+				</script>
+			</div>
+				
+				<div class="clearfix"> </div>
+			</div>
+			
+			<!-- video-grids -->
+				<div class="video-grids">
+					<div class="col-md-3 video-grids-right" >
+						
+						<div class="sap_tabs">	
+							
+								<ul class="resp-tabs-list">
+									<li class="resp-tab-item grid1" style="padding-left:30px"><span>Most Recent News</span></li>
+									
+									<div class="clear"></div>
+								</ul>				  	 
+								
+								
+							
+						</div>
+						<div class="news-grid-rght3">
+								<img src="images/13.jpg" alt=" " class="img-responsive" />
+								
+							</div>
+							<div class="news-grid-rght3"  style="margin-top:10px">
+								<img src="images/14.jpg" alt=" " class="img-responsive" />
+								
+							</div>
+							<div class="news-grid-rght3"  style="margin-top:10px">
+								<img src="images/15.jpg" alt=" " class="img-responsive" />
+								
+							</div>
+							<div class="news-grid-rght3"  style="margin-top:10px">
+								<img src="images/16.jpg" alt=" " class="img-responsive" />
+								
+							</div>
+							<div class="news-grid-rght3"  style="margin-top:10px">
+								<img src="images/15.jpg" alt=" " class="img-responsive" />
+								
+							</div>
+					</div>
+					<div class="col-md-6 video-grids-left">
+						
+							<div class="col-md-6 banner-bottom-grid-left">
+
+							<div class="sap_tabs">	
+							<div style="display: block; width: 100%; margin: 0px;">
+								<ul class="resp-tabs-list">
+									<li class="resp-tab-item grid1"><span>BHUBANESWAR</span></li>
+									
+									<div class="clear"></div>
+								</ul>				  	 
+							</div>
+						     </div>
+						   <div class="news-grid-rght3">
+								<img src="images/bbsr.jpg" alt=" " class="img-responsive" />
+								
+							</div>
+								 <a href="sub.html" class="btn btn-success" style="margin-top:10px;">Read more...</a>
+								 
+							</div>
+				<div class="col-md-6 banner-bottom-grid-left">
+					<div class="sap_tabs">	
+							<div style="display: block; width: 100%; margin: 0px;">
+								<ul class="resp-tabs-list">
+									<li class="resp-tab-item grid1"><span>CUTTACK</span></li>
+									
+									<div class="clear"></div>
+								</ul>				  	 
+							</div>
+						     </div>
+						   <div class="news-grid-rght3">
+								<img src="images/bbsr.jpg" alt=" " class="img-responsive" />
+							</div>
+								  <a href="sub.html" class="btn btn-success" style="margin-top:10px;">Read more...</a>
+								<div class="clearfix"> </div>
+				</div>
+				<div class="col-md-6 banner-bottom-grid-left" style="margin-top:5px">
+					<div class="sap_tabs">	
+							<div style="display: block; width: 100%; margin: 0px;">
+								<ul class="resp-tabs-list">
+									<li class="resp-tab-item grid1"><span>BERHAMPUR</span></li>
+									
+									<div class="clear"></div>
+								</ul>				  	 
+							</div>
+					</div>
+						   <div class="news-grid-rght3">
+								<img src="images/bbsr.jpg" alt=" " class="img-responsive" />
+							</div>
+								  <a href="sub.html" class="btn btn-success" style="margin-top:10px;">Read more...</a>
+								
+				</div>
+				<div class="col-md-6 banner-bottom-grid-left" style="margin-top:5px">
+					<div class="sap_tabs">	
+							<div style="display: block; width: 100%; margin: 0px;">
+								<ul class="resp-tabs-list">
+									<li class="resp-tab-item grid1"><span>ANGUL-DHENKANAL</span></li>
+									
+									<div class="clear"></div>
+								</ul>				  	 
+							</div>
+						     </div>
+						   <div class="news-grid-rght3">
+								<img src="images/bbsr.jpg" alt=" " class="img-responsive" />
+							</div>
+								  <a href="sub.html" class="btn btn-success" style="margin-top:10px;">Read more...</a>
+								 
+								
+				</div>
+				<div class="col-md-6 banner-bottom-grid-left" style="margin-top:5px">
+					<div class="sap_tabs">	
+							<div style="display: block; width: 100%; margin: 0px;">
+								<ul class="resp-tabs-list">
+									<li class="resp-tab-item grid1"><span>BALASORE</span></li>
+									
+									<div class="clear"></div>
+								</ul>				  	 
+							</div>
+						     </div>
+						   <div class="news-grid-rght3">
+								<img src="images/bbsr.jpg" alt=" " class="img-responsive" />
+							</div>
+								  <a href="sub.html" class="btn btn-success" style="margin-top:10px;">Read more...</a>
+								<div class="clearfix"> </div>
+				</div>
+				<div class="col-md-6 banner-bottom-grid-left" style="margin-top:5px">
+					<div class="sap_tabs">	
+							<div style="display: block; width: 100%; margin: 0px;">
+								<ul class="resp-tabs-list">
+									<li class="resp-tab-item grid1"><span>RAYAGADA</span></li>
+									
+									<div class="clear"></div>
+								</ul>				  	 
+							</div>
+						     </div>
+						   <div class="news-grid-rght3">
+								<img src="images/bbsr.jpg" alt=" " class="img-responsive" />
+							</div>
+								 <a href="sub.html" class="btn btn-success" style="margin-top:10px;">Read more...</a>
+								 <div class="clearfix"> </div>
+								
+				</div>
+				
+				
+				
+					</div>
+	                 <div class="col-md-3 video-grids-right">
+						<div class="sap_tabs">	
+							
+								<ul class="resp-tabs-list">
+									<li class="resp-tab-item grid1" style="padding-left:30px"><span>most shared</span></li>
+									
+									<div class="clear"></div>
+								</ul>				  	 
+								
+								
+							
+						</div>
+						
+						<div class="news-grid-rght3" >
+								<img src="images/18.jpg" alt=" " class="img-responsive" />
+								<div class="story">
+									<p>story of the week</p>
+									<h3><a href="single.html">US hails west Africa Ebola progress</a></h3>
+								</div>
+							</div>
+					</div>
+					 <div class="col-md-3 video-grids-right" style="margin-top:50px">
+						<div class="sap_tabs">	
+							
+								<ul class="resp-tabs-list">
+									<li class="resp-tab-item grid1" style="padding-left:30px"><span>most shared</span></li>
+									
+									<div class="clear"></div>
+								</ul>				  	 
+								
+								
+							
+						</div>
+						
+						<div class="news-grid-rght3" >
+								<img src="images/18.jpg" alt=" " class="img-responsive" />
+								<div class="story">
+									<p>story of the week</p>
+									<h3><a href="">US hails west Africa Ebola progress</a></h3>
+								</div>
+							</div>
+							<div class="news-grid-rght2">
+								<h3>subscribe to our newsletter</h3>
+								<p>Get the latest news and updates by signing up to our daily newsletter.We won't sell your email or spam you !</p>
+								<form>
+									<input type="text" value="enter your Email address" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'enter your Email address';}">
+									<input type="submit" value="Submit">
+								</form>
+							</div>
+					</div>
+					
+					<div class="clearfix"> </div>
+				</div>
+			
+				
+	<div class="footer">
+		<div class="container">
+			<div class="footer-grids">
+				<div class="col-md-4 footer-grid-left">
+					<h3>Feedbacks</h3>
+					<ul>
+						<li><a href="#">the moment an unlimited #antares rocket exploded seconds after launch 
+							<i>http//example.com</i></a><span>15 minutes ago</span></li>
+						<li><a href="mailto:info@example.com" class="cols">@NASA</a> & <a href="mailto:info@example.com" class="cols">
+							@orbital science</a> <a href="#">gathering data on failure #antares rocket bound 
+							for international space</a><span>45 minutes ago</span></li>
+						<li><a href="#">ex-cabinet minister chris huhne loses legal challenge over $77,750 
+							court costs incurred in speeding points</a><span>1 day ago</span></li>
+					</ul>
+				</div>
+				<div class="col-md-4 footer-grid-left">
+					<h3>contact form</h3>
+					<form>
+						<input type="text" value="enter your full name" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'enter your full name';}" required="">
+						<input type="email" value="enter your email address" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'enter your email address';}" required="">
+						<textarea onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Message...';}" required="">Message...</textarea>
+						<input type="submit" value="Submit" >
+					</form>
+				</div>
+				<div class="col-md-4 footer-grid-left">
+					<h3>about us</h3>
+					<!--<p> dolor sit amet, consectetur adipiscing elit, sed do 
+						eiusmod tempor incididunt ut labore et dolore magna aliqua. 
+						Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris.
+						<span>But I must explain to you how all this mistaken idea of denouncing
+						pleasure and praising pain was born and I will give you a complete 
+						account of the system, and expound the actual teachings of the 
+						great explorer.</span>
+						<i>- The Entire TLG Team</i></p>-->
+				</div>
+				<div class="clearfix"> </div>
+			</div>
+			<div class="footer-bottom">
+				<div class="footer-bottom-left">
+					<p>&copy 2016 News Times. All rights reserved | Designed by <a href="http://"></a></p>
+				</div>
+				<div class="footer-bottom-right">
+					<ul>
+						<li><a href="#" class="icon-button twitter"><i class="icon-twitter"></i><span></span></a></li>
+						<li><a href="#" class="icon-button google"><i class="icon-google"></i><span></span></a></li>
+						<li><a href="#" class="icon-button v"><i class="icon-v"></i><span></span></a></li>
+					</ul>
+				</div>
+				<div class="clearfix"> </div>
+			</div>
+		</div>
+	</div>
+<!-- //footer -->
+		</div>
+	</div>
+<!-- //banner-bottom -->
+<!-- footer -->
+	
+<!-- for bootstrap working -->
+	<script src="js/bootstrap.js"></script>
+<!-- //for bootstrap working -->
+</body>
+</html>
